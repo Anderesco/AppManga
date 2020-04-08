@@ -39,7 +39,7 @@ public class Genero
 	@Column(name = "Estado")
 	private Boolean estado;
 	
-	@OneToMany(mappedBy = "generomanga", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "genero", fetch = FetchType.LAZY)
 	private List<MangaGenero> listaMangaGenero;
 
 	

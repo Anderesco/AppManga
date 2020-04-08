@@ -1,10 +1,9 @@
 package com.demo.manga.service.hibernate;
 
-import java.util.List;
-
-import com.demo.manga.entity.Usuario;
+import com.demo.manga.bean.UsuarioBean;
 
 public interface UsuarioService 
 {
-	public List<Usuario> ObtenerUsuarioEnSesion(Integer ID);
+	public UsuarioBean ObtenerUsuarioEnSesion(Long ID);
+	public Long ValidarUsuario(String usuario, String contraseña);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th = "http://www.thymeleaf.org">
 <head>
 	<title>Inicio Sesión</title>
 	<meta charset="UTF-8">
@@ -25,20 +25,20 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="usuario" placeholder="Usuario" autocomplete="off">
+						<input class="input100" type="text" name="usuario" placeholder="Usuario" autocomplete="off" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
 						<span class="btn-show-pass"><i class="zmdi zmdi-eye"></i></span>
-						<input class="input100" type="password" name="pass" placeholder="Contraseña" autocomplete="off">
+						<input class="input100" type="password" name="pass" placeholder="Contraseña" autocomplete="off" required>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button type = "submit" class="login100-form-btn">
 								Iniciar Sesión
 							</button>
 						</div>

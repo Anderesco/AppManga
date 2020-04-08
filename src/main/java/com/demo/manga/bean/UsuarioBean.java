@@ -7,8 +7,9 @@ public class UsuarioBean implements Serializable
 	private static final long serialVersionUID = 1L;
 	
 	private String nombreUsuario;
-	private String contrasenia;
-	private RolBean nombreRol;
+	private String contraseña;
+	private String nombreRol;
+	private PersonaBean persona;
 	
 	public UsuarioBean() {
 		super();
@@ -21,25 +22,34 @@ public class UsuarioBean implements Serializable
 	public void setNombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
-	public String getContrasenia() {
-		return contrasenia;
+	public String getContraseña() {
+		return contraseña;
 	}
-	public void setContrasenia(String contrasenia) {
-		this.contrasenia = contrasenia;
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
-	public RolBean getNombreRol() {
+	public String getNombreRol() {
 		return nombreRol;
 	}
-	public void setNombreRol(RolBean nombreRol) {
+	public void setNombreRol(String nombreRol) {
 		this.nombreRol = nombreRol;
+	}
+	
+	public PersonaBean getPersona() {
+		return persona;
+	}
+
+	public void setPersona(PersonaBean persona) {
+		this.persona = persona;
 	}
 
 	@Override
 	public String toString() {
 		return "UsuarioBean {" + "\n" +
 			   "nombreUsuario=" + nombreUsuario + ",\n" +
-			   "contrasenia=" + contrasenia + ",\n " + 
+			   "contrasenia=" + contraseña + ",\n " + 
 			   "nombreRol=" + nombreRol + "\n" +
+			   "persona=" + persona + "\n" +
 			   "}";
 	}
 	

@@ -63,11 +63,14 @@ public class Manga
 	@Column(name = "Estado")
 	private Boolean estado;
 	
-	@OneToMany(mappedBy = "generomanga", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "manga", fetch = FetchType.LAZY)
 	private List<MangaGenero> listaMangaGenero;
 	
-	@OneToMany(mappedBy = "capitulomanga", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "idManga", fetch = FetchType.LAZY)
 	private List<CapituloManga> listaCapitulosManga;
+	
+	@OneToMany(mappedBy = "manga", fetch = FetchType.LAZY)
+	private List<UsuarioManga> listaUsuarioManga;
 
 	
 	public Long getIdManga() {
@@ -204,6 +207,14 @@ public class Manga
 
 	public void setListaCapitulosManga(List<CapituloManga> listaCapitulosManga) {
 		this.listaCapitulosManga = listaCapitulosManga;
+	}
+
+	public List<UsuarioManga> getListaUsuarioManga() {
+		return listaUsuarioManga;
+	}
+
+	public void setListaUsuarioManga(List<UsuarioManga> listaUsuarioManga) {
+		this.listaUsuarioManga = listaUsuarioManga;
 	}
 
 }

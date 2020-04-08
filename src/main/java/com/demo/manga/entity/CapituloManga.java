@@ -51,7 +51,7 @@ public class CapituloManga
 	@Column(name = "Estado")
 	private Boolean estado;
 	
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "idCapitulo", fetch = FetchType.LAZY)
 	private List<PaginaManga> listaPaginaManga;
 
 	public Long getIdGenero() {

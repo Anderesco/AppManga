@@ -39,7 +39,7 @@ public class Rol
 	@Column(name = "Estado")
 	private Boolean estado;
 
-	@OneToMany(mappedBy = "usuariorol", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "rol", fetch = FetchType.LAZY)
 	List<UsuarioRol> listaUsuarioRol;
 	
 	public Long getIdCliente() {

@@ -48,8 +48,11 @@ public class Usuario
 	@Column(name = "Estado")
 	private Boolean estado;
 	
-	@OneToMany(mappedBy = "usuariomanga")
+	@OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
 	private List<UsuarioManga> listaUsuarioManga;
+	
+	@OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
+	private List<UsuarioRol> listaUsuarioRol;
 
 	public Long getIdUsuario() {
 		return idUsuario;
@@ -130,4 +133,13 @@ public class Usuario
 	public void setListaUsuarioManga(List<UsuarioManga> listaUsuarioManga) {
 		this.listaUsuarioManga = listaUsuarioManga;
 	}
+
+	public List<UsuarioRol> getListaUsuarioRol() {
+		return listaUsuarioRol;
+	}
+
+	public void setListaUsuarioRol(List<UsuarioRol> listaUsuarioRol) {
+		this.listaUsuarioRol = listaUsuarioRol;
+	}
+	
 }
