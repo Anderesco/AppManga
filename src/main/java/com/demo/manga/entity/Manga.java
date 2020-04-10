@@ -63,6 +63,12 @@ public class Manga
 	@Column(name = "Estado")
 	private Boolean estado;
 	
+	@Column(name = "Precuela")
+    private String precuela;
+	
+    @Column(name = "Secuela")
+    private String secuela;
+	
 	@OneToMany(mappedBy = "manga", fetch = FetchType.LAZY)
 	private List<MangaGenero> listaMangaGenero;
 	
@@ -191,6 +197,22 @@ public class Manga
 
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
+	}
+
+	public String getPrecuela() {
+		return precuela;
+	}
+
+	public void setPrecuela(String precuela) {
+		this.precuela = precuela;
+	}
+
+	public String getSecuela() {
+		return secuela;
+	}
+
+	public void setSecuela(String secuela) {
+		this.secuela = secuela;
 	}
 
 	public List<MangaGenero> getListaMangaGenero() {

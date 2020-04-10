@@ -43,7 +43,6 @@ public class UsuarioRepository
 					"INNER JOIN rol r ON r.ID = ur.IDRol\n" + 
 					"WHERE u.ID = :ID")
 					.setParameter("ID", ID)
-					//.addEntity(Usuario.class)
 					.list();
 		}
 	}

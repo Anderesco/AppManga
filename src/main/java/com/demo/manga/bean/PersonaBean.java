@@ -6,6 +6,7 @@ public class PersonaBean
 	private String apellidoPaterno;
 	private String apellidoMaterno;
 	private String correo;
+	
 	public String getNombre() {
 		return nombre;
 	}

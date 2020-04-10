@@ -10,12 +10,14 @@ public class MangaBean implements Serializable
 	private String nombre1;
 	private String nombre2;
 	private String autores;
-	private Integer anio;
+	private Integer año;
 	private String estadoActual;
 	private Integer capitulos;
 	private String descripcion;
-	private List<String> nombreGenero;
-	private List<String> listaCapitulos;
+	private String precuela;
+	private String secuela;
+	private String[] genero;
+	private List<CapitulosMangaBean> listaCapitulos;
 	
 	
 	public MangaBean() {
@@ -40,11 +42,11 @@ public class MangaBean implements Serializable
 	public void setAutores(String autores) {
 		this.autores = autores;
 	}
-	public Integer getAnio() {
-		return anio;
+	public Integer getAño() {
+		return año;
 	}
-	public void setAnio(Integer anio) {
-		this.anio = anio;
+	public void setAño(Integer año) {
+		this.año = año;
 	}
 	public String getEstadoActual() {
 		return estadoActual;
@@ -64,17 +66,37 @@ public class MangaBean implements Serializable
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public List<String> getNombreGenero() {
-		return nombreGenero;
+
+	public String[] getGenero() {
+		return genero;
 	}
-	public void setNombreGenero(List<String> nombreGenero) {
-		this.nombreGenero = nombreGenero;
+
+	public void setGenero(String[] genero) {
+		this.genero = genero;
 	}
-	public List<String> getListaCapitulos() {
+
+	public List<CapitulosMangaBean> getListaCapitulos() {
 		return listaCapitulos;
 	}
-	public void setListaCapitulos(List<String> listaCapitulos) {
+
+	public void setListaCapitulos(List<CapitulosMangaBean> listaCapitulos) {
 		this.listaCapitulos = listaCapitulos;
+	}
+	
+	public String getPrecuela() {
+		return precuela;
+	}
+
+	public void setPrecuela(String precuela) {
+		this.precuela = precuela;
+	}
+
+	public String getSecuela() {
+		return secuela;
+	}
+
+	public void setSecuela(String secuela) {
+		this.secuela = secuela;
 	}
 
 	@Override
@@ -84,11 +106,13 @@ public class MangaBean implements Serializable
 			   "nombre1=" + nombre1 + ",\n" +
 			   "nombre2=" + nombre2 + ",\n " +
 			   "autores=" + autores + ",\n " +
-			   "anio=" + anio + ",\n " +
+			   "año=" + año + ",\n " +
 			   "estadoActual=" + estadoActual + ",\n " +
+			   "precuela=" + precuela +",\n" +
+			   "secuela=" + secuela + ",\n" +
 			   "capitulos=" + capitulos + ", " +
 			   "descripcion=" + descripcion+ ",\n" +
-			   "nombreGenero=" + nombreGenero + ", " +
+			   "Genero=" + genero + ", " +
 			   "listaCapitulos=" + listaCapitulos + "\n}";
 	}
 	

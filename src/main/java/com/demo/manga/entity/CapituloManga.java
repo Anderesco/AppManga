@@ -24,7 +24,7 @@ public class CapituloManga
 	private Long idCapituloManga;
 	
 	@Column(name = "NumeroCapitulo")
-	private Integer numeroCapitulo;
+    private Double numeroCapitulo;
 	
 	@Column(name = "NombreCapitulo")
 	private String nombreCapitulo;
@@ -62,11 +62,11 @@ public class CapituloManga
 		this.idCapituloManga = idCapituloManga;
 	}
 
-	public Integer getNumeroCapitulo() {
+	public Double getNumeroCapitulo() {
 		return numeroCapitulo;
 	}
 
-	public void setNumeroCapitulo(Integer numeroCapitulo) {
+	public void setNumeroCapitulo(Double numeroCapitulo) {
 		this.numeroCapitulo = numeroCapitulo;
 	}
 
