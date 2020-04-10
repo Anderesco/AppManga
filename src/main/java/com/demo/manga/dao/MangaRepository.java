@@ -38,7 +38,8 @@ public class MangaRepository
             return session.createNativeQuery(
             		"SELECT cp.NumeroCapitulo, cp.NombreCapitulo FROM CapituloManga cp\n" +
             		"INNER JOIN Manga m ON m.ID = cp.IDManga\n" +
-            		"WHERE m.ID = :ID")
+            		"WHERE m.ID = :ID\n" +
+            		"ORDER BY cp.NumeroCapitulo ASC")
             		.setParameter("ID", ID)
             		.list();
         }

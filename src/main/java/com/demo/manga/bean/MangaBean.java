@@ -1,7 +1,7 @@
 package com.demo.manga.bean;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Map;
 
 public class MangaBean implements Serializable
 {
@@ -17,7 +17,7 @@ public class MangaBean implements Serializable
 	private String precuela;
 	private String secuela;
 	private String[] genero;
-	private List<CapitulosMangaBean> listaCapitulos;
+	private Map<Double, String> listaCapitulos;
 	
 	
 	public MangaBean() {
@@ -74,14 +74,6 @@ public class MangaBean implements Serializable
 	public void setGenero(String[] genero) {
 		this.genero = genero;
 	}
-
-	public List<CapitulosMangaBean> getListaCapitulos() {
-		return listaCapitulos;
-	}
-
-	public void setListaCapitulos(List<CapitulosMangaBean> listaCapitulos) {
-		this.listaCapitulos = listaCapitulos;
-	}
 	
 	public String getPrecuela() {
 		return precuela;
@@ -97,6 +89,14 @@ public class MangaBean implements Serializable
 
 	public void setSecuela(String secuela) {
 		this.secuela = secuela;
+	}
+	
+	public Map<Double, String> getListaCapitulos() {
+		return listaCapitulos;
+	}
+
+	public void setListaCapitulos(Map<Double, String> listaCapitulos) {
+		this.listaCapitulos = listaCapitulos;
 	}
 
 	@Override
